@@ -1,7 +1,7 @@
 # 💻 Repositório de FastAPI para Desenvolvimento Web
 
 <p align="center">
-  <img src="Logo_FastAPI\Logo_FastAPI.png" alt="Logo do FastAPI" width="200">
+  <img src="Logo_FastAPI/FastAPI.png" alt="Logo do FastAPI" width="200">
 </p>
 
 Este repositório reúne conteúdos e atividades desenvolvidas com foco no **FastAPI**, um moderno e performático framework web para Python. O material aborda desde a criação de APIs robustas até a integração com bancos de dados e a implementação de funcionalidades avançadas.
