@@ -14,9 +14,9 @@ O objetivo é consolidar o conhecimento em desenvolvimento back-end com Python, 
 
 1.  Faça o clone do repositório:
     ```bash
-    git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO_FASTAPI.git](https://github.com/SEU_USUARIO/SEU_REPOSITORIO_FASTAPI.git)
+    git clone https://github.com/LeticiaRoth/Aulas_FastAPI.git
     ```
-2.  Instale as dependências (geralmente em um ambiente virtual):
+2.  Instale as dependências:
     ```bash
     pip install -r requirements.txt
     ```
