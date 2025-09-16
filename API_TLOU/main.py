@@ -2,7 +2,7 @@
 from fastapi import FastAPI, HTTPException, status, Response, Depends
 
 #Pego o modelo criado
-from models import PersonagensTLOU
+from models import PersonagensTLOU, PersonagensTLOUUpdate
 
 from typing import Optional, Any
 
@@ -116,10 +116,24 @@ async def delete_personagem(personagem_id: int):
 
    
 #Método PATCH
-#@app.patch()
+@app.patch('/personagens/{pesonagem_id}', status_code=status.HTTP_202_ACCEPTED, description='Atualização parcial dos personagens')
+async def patch_personagem(personagem_id:int,personagem_data:PersonagensTLOUUpdate):
 
-'''
+    #Personagem data:json com os campos que irão ser modificado
+    if personagem_id not in personagens:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail='Personagem TLOU não encontrado')
+    
+    #Atualiza os campos passados na requisição, como o pedido
+    personagem_existente = personagens[personagem_id]
+    dados_atualizar = personagem_data.model_dump(exclude_unset=True)
+    personagem_existente.update(dados_atualizar)
+
+    return personagem_existente
+
+
+
+"""
 if __name__ == 'main':
     import uvicorn
-    uvicorn.run('main:app', host="127.0.0.1", port=8001, log_level="info", reload=True)'
-'''
+    uvicorn.run('main:app', host="127.0.0.1", port=8001, log_level="info", reload=True)
+"""
