@@ -6,7 +6,7 @@ class BandasSchema(SCBaseModel):
     
     id : Optional[int] = None
     nome : str
-    qtd_integrantes : int
+    qtd_integrante : int
     tipo_musical : str
 
 
