@@ -1,0 +1,12 @@
+1 - Criar a env (py -m venv .env)
+2 - instalar dependências
+3 - Criar o requirements (pip freeze > requirements.txt)
+4 - Ativar a ENV e instalar dependências dentro dela, pode fazer isso depois que ativar para não intalar tudo antes 
+---------------------------------------------
+
+
+PARA QUE SERVE CADA DIRETÓRIOS
+API: onde vamos mexer na api de fato
+CORE: onde colocamos os arquivos comuns de configuração e conexão com o banco de dados, ou seja onde será colocado a URL
+MODELS: onde criamos os models, como o Django
+SCHEMAS: serve para converter de banco de dados para JSON
